@@ -46,18 +46,18 @@ export default function App() {
   return (
     <div className="min-h-screen pb-20 relative font-sans">
       <BatikBackground />
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="relative z-10 flex flex-col h-full w-full min-w-0">
         <Header />
         <Hero readyCount={readyCount} soldCount={soldCount} />
         
-        <div className="sticky top-[56px] z-30 bg-brand-bg/90 backdrop-blur-md pb-4 pt-2 -mt-4 border-b border-brand-text/5">
-          <div className="max-w-7xl mx-auto px-4">
+        <div className="sticky top-[56px] z-30 bg-brand-bg/90 backdrop-blur-md pb-4 pt-2 -mt-4 border-b border-brand-text/5 w-full min-w-0">
+          <div className="max-w-7xl mx-auto px-4 min-w-0">
             <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
             <ModelFilters activeModel={activeModel} setActiveModel={setActiveModel} />
           </div>
         </div>
 
-        <main className="max-w-7xl mx-auto px-4 py-6">
+        <main className="w-full max-w-7xl mx-auto px-4 py-6 min-w-0">
           {filteredProducts.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {filteredProducts.map(product => (
@@ -128,7 +128,7 @@ function Tabs({ activeTab, setActiveTab }: { activeTab: TabState, setActiveTab: 
   const tabs: TabState[] = ['Semua', 'Premium', 'Standard'];
   
   return (
-    <div className="flex items-center gap-2 mb-3 overflow-x-auto no-scrollbar">
+    <div className="flex items-center gap-2 mb-3 overflow-x-auto scrollbar-hide">
       {tabs.map(tab => (
         <button
           key={tab}

@@ -1,0 +1,6 @@
+{
+  "name": "Daster Ayu Catalog",
+  "description": "Mobile-first product catalog for Daster Ayu, a small business selling Indonesian house dresses. Customers can browse available stock and order via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
